@@ -1,9 +1,14 @@
 import React from "react";
-import SearchPanel from "./search-panel";
 
-const TodoListItem = () => {
+
+const TodoListItem = ({ label, important = false }) => {
+
+    const style = {
+        color: important ? 'tomato' : 'black'
+    }
+
     return (
-        <span>Drink Coffee</span>
+        <span style={style}>{ label }</span>
     );
 };
 
